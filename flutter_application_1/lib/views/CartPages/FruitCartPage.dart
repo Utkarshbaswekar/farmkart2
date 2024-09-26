@@ -33,17 +33,11 @@ class _CartPageState extends State<CartPage> {
               ),
               body: Column(children: [
                 const SizedBox(height: 20),
-
-
-
-                       Text('FruitsCart' , 
-                       style :  TextStyle(  
-                         color : Colors.black , 
-                         fontSize: 20, 
-                            fontWeight: FontWeight.w700
-                       )
-                       ), 
-
+                const Text('FruitsCart',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700)),
                 Expanded(
                     child: ListView.builder(
                         itemCount: value.userCart.length,
@@ -51,24 +45,6 @@ class _CartPageState extends State<CartPage> {
                           Fruits individualitem = value.getuserCart()[index];
                           return Cartcontoller(fru: individualitem);
                         })),
-
-
-
-
-
-                          
-
-
-              
-
-
-                       
-                  
-
-
-
-  
-
               ]),
             ));
   }

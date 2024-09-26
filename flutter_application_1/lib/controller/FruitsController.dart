@@ -14,7 +14,7 @@ class FruitsController extends StatelessWidget {
         height: 150,
         width: 200,
         decoration: BoxDecoration(
-            color: Color.fromARGB(255, 189, 232, 241),
+            color: const Color.fromARGB(255, 189, 232, 241),
             borderRadius: BorderRadiusDirectional.circular(90)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,17 +29,17 @@ class FruitsController extends StatelessWidget {
             //name
 
             Text(fruit1.name,
-                style: TextStyle(
+                style: const TextStyle(
                     fontWeight: FontWeight.w900,
                     fontSize: 15,
-                    color: const Color.fromARGB(255, 0, 0, 0))),
+                    color: Color.fromARGB(255, 0, 0, 0))),
 
             // price
             Text(fruit1.price,
-                style: TextStyle(
+                style: const TextStyle(
                     fontWeight: FontWeight.w900,
                     fontSize: 15,
-                    color: const Color.fromARGB(255, 0, 0, 0))),
+                    color: Color.fromARGB(255, 0, 0, 0))),
 
             //    Add
 
@@ -47,15 +47,15 @@ class FruitsController extends StatelessWidget {
                 height: 40,
                 width: 80,
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 91, 207, 112),
+                    color: const Color.fromARGB(255, 91, 207, 112),
                     borderRadius: BorderRadius.circular(15)),
                 child: TextButton(
                     onPressed: onPressed,
-                    child: Text('Add',
+                    child: const Text('Add',
                         style: TextStyle(
                             fontWeight: FontWeight.w900,
                             fontSize: 15,
-                            color: const Color.fromARGB(255, 0, 0, 0)))))
+                            color: Color.fromARGB(255, 0, 0, 0)))))
           ],
         ),
       ),

@@ -34,80 +34,46 @@ class _AllCartPageState extends State<AllCartPage> {
               ),
               body: Column(children: [
                 const SizedBox(height: 20),
-
-
-
-                       const Text('FruitsCart' , 
-                       style :  TextStyle(  
-                         color : Colors.black , 
-                         fontSize: 20, 
-                            fontWeight: FontWeight.w700
-                       )
-                       ), 
-
+                const Text('FruitsCart',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700)),
                 Expanded(
                     child: ListView.builder(
                         itemCount: value.userCart.length,
                         itemBuilder: (context, index) {
-                      
                           Fruits individualitem = value.getuserCart()[index];
-                          
-                          return Cartcontoller(fru: individualitem , 
-                         
 
-                          
+                          return Cartcontoller(
+                            fru: individualitem,
                           );
-
-                          
                         })),
-
-
-
-
-
-                           Text('VegiCart' , 
-                       style :  TextStyle(  
-                         color : Colors.black , 
-                         fontSize: 20, 
-                            fontWeight: FontWeight.w700
-                       )
-                       ), 
-
-
-
+                const Text('VegiCart',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700)),
                 Expanded(
                     child: ListView.builder(
                         itemCount: value.userCart2.length,
                         itemBuilder: (context, index) {
                           Veg indi = value.getVegiuserCart()[index];
                           return VegCartcontoller(vegi: indi);
-                        })) ,
-
-
-
-
-                       
-                           Text('Dryfruit-Cart' , 
-                       style :  TextStyle(  
-                         color : Colors.black , 
-                         fontSize: 20, 
-                            fontWeight: FontWeight.w700
-                       )
-                       ), 
-                     Expanded(
+                        })),
+                const Text('Dryfruit-Cart',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700)),
+                Expanded(
                     child: ListView.builder(
                         itemCount: value.userCart3.length,
                         itemBuilder: (context, index) {
-
                           Dry indi = value.getuserCart3()[index];
                           return dryCartcontoller(dryii: indi);
-                        })) , 
-
-
-
-  
-
-              Gnav()
+                        })),
+                Gnav()
               ]),
             ));
   }

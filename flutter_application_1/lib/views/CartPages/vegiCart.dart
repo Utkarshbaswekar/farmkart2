@@ -28,9 +28,6 @@ class _CartPageState extends State<CartPage2> {
               ),
               body: Column(children: [
                 const SizedBox(height: 20),
-
-
-
                 Expanded(
                     child: ListView.builder(
                         itemCount: value.userCart2.length,
@@ -38,9 +35,6 @@ class _CartPageState extends State<CartPage2> {
                           Veg indi = value.getVegiuserCart()[index];
                           return VegCartcontoller(vegi: indi);
                         }))
-
-
-
               ]),
             ));
   }

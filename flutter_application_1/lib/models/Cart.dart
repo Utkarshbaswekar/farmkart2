@@ -4,9 +4,7 @@ import 'package:flutter_application_1/models/dry.dart';
 import 'package:flutter_application_1/models/veg.dart';
 
 class Cart extends ChangeNotifier {
-
-
-  // 1. List one fruits lists 
+  // 1. List one fruits lists
   List<Fruits> CartItemList = [
     Fruits(
       image: 'assets/images/fruits/apple2.jpeg',
@@ -33,9 +31,7 @@ class Cart extends ChangeNotifier {
         price: '500/-'),
   ];
 
-
-
-  // list two vegitables list 
+  // list two vegitables list
   List<Veg> VegItemList = [
     Veg(
       image: 'assets/images/vegi/chilly.jpeg',
@@ -56,10 +52,8 @@ class Cart extends ChangeNotifier {
     Veg(image: 'assets/images/vegi/tomato.jpeg', name: 'Tomato', price: '50/-'),
   ];
 
-
-
-   // List three dry fruits lists .....
-       List<Dry> DryCartItemList = [
+  // List three dry fruits lists .....
+  List<Dry> DryCartItemList = [
     Dry(
       image: 'assets/images/dryfruits/almonds.jpeg',
       name: 'Almonds',
@@ -75,32 +69,34 @@ class Cart extends ChangeNotifier {
       name: 'Cashunuts',
       price: '4437/-',
     ),
-    Dry(image: 'assets/images/dryfruits/raisins.jpeg', name: 'Raisins', price: '7848/-'),
-    Dry(image: 'assets/images/dryfruits/walnuts.jpeg', name: 'Walnuts', price: '7850/-'),
+    Dry(
+        image: 'assets/images/dryfruits/raisins.jpeg',
+        name: 'Raisins',
+        price: '7848/-'),
+    Dry(
+        image: 'assets/images/dryfruits/walnuts.jpeg',
+        name: 'Walnuts',
+        price: '7850/-'),
   ];
 
-
-
-
 ///////////////////////////////////////////////
-  //1}  // get pet list
+  // // get pet list
 
   List<Fruits> getCartItemList() {
     return CartItemList;
   }
 
-  //2 //for vegi items
+  //for vegi items
 
   List<Veg> getVegiCartItemList() {
     return VegItemList;
   }
 
-  // 3. get dry fruits 
+  //  get dry fruits
 
   List<Dry> getDryCartItemList() {
     return DryCartItemList;
   }
-
 
 //////////////////////////////////////////////////////////
   //usercart
@@ -110,15 +106,9 @@ class Cart extends ChangeNotifier {
   //usercart2   for vegi
   List<Veg> userCart2 = [];
 
-
-
   // usercart3  for dryfruits
 
-  List<Dry> userCart3 =[] ; 
-
-
-
-
+  List<Dry> userCart3 = [];
 
 ///////////////////////////////////////////////////////////
 
@@ -135,15 +125,13 @@ class Cart extends ChangeNotifier {
 
   // get dryfruits userCart
 
-  List<Dry> getuserCart3(){ 
-     return userCart3; 
+  List<Dry> getuserCart3() {
+    return userCart3;
   }
-
-
 
 ////////////////////////////////////////////////
 
-  // adding items- fruits 
+  // adding items- fruits
   void additem(Fruits petti) {
     userCart.add(petti);
 
@@ -158,21 +146,13 @@ class Cart extends ChangeNotifier {
     notifyListeners();
   }
 
-
   // adding for --- dryfrits ---
 
-     
-    void additem3(Dry petti3) {
+  void additem3(Dry petti3) {
     userCart3.add(petti3);
 
     notifyListeners();
   }
-
-
-
-
-
-
 
 //////////////////////////////////////
 
@@ -188,18 +168,12 @@ class Cart extends ChangeNotifier {
     notifyListeners();
   }
 
+  // for dryfruits
 
-
-   // for dryfruits  
-
-   void remove3(Dry remove3) {
+  void remove3(Dry remove3) {
     userCart3.remove(remove3);
     notifyListeners();
   }
 
-
-
 ///////////////////////////////
-
-
 }

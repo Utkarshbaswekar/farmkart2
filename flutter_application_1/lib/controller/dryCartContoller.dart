@@ -15,8 +15,6 @@ class dryCartcontoller extends StatefulWidget {
 }
 
 class _dryCartcontollerState extends State<dryCartcontoller> {
-
-  
   void removeitem3() {
     Provider.of<Cart>(context, listen: false).remove3(widget.dryii);
 

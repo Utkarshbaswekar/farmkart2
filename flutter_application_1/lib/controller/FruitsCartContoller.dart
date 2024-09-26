@@ -7,10 +7,8 @@ import 'package:provider/provider.dart';
 
 class Cartcontoller extends StatefulWidget {
   final Fruits fru;
-   
 
-
- Cartcontoller({super.key, required this.fru});
+  Cartcontoller({super.key, required this.fru});
 
   @override
   State<Cartcontoller> createState() => _CartcontollerState();
@@ -28,15 +26,6 @@ class _CartcontollerState extends State<Cartcontoller> {
             ));
   }
 
-
-
-
-
- 
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return Column(children: [
@@ -50,18 +39,6 @@ class _CartcontollerState extends State<Cartcontoller> {
             },
             icon: Icon(Icons.delete)),
       ),
-
-     
-
-
-
-
-      
-
-
-
-
-
     ]);
   }
 }

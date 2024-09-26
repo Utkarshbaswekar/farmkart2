@@ -9,12 +9,7 @@ import 'package:flutter_application_1/models/dry.dart';
 import 'package:flutter_application_1/models/veg.dart';
 import 'package:provider/provider.dart';
 
-// class CartPage3 extends StatefulWidget {
-//   const CartPage3({super.key});
 
-//   @override
-//   State<CartPage3> createState() => _CartPage3State();
-// }
 
 class CartPage3 extends StatefulWidget {
   const CartPage3({super.key});
@@ -60,24 +55,6 @@ class _CartPage3State extends State<CartPage3> {
                           Dry indi = value.getuserCart3()[index];
                           return dryCartcontoller(dryii: indi);
                         })) , 
-
-
-
-
-
-
-
-                          
-
-
-              
-
-
-                       
-                  
-
-
-
   
 
               ]),

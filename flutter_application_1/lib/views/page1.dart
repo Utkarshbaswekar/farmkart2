@@ -17,7 +17,6 @@ import 'package:flutter_application_1/views/CartPages/dryfruits,dart';
 import 'package:flutter_application_1/views/CartPages/vegiCart.dart';
 
 import 'package:provider/provider.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 
 class Page1 extends StatefulWidget {
   const Page1({super.key});
@@ -73,68 +72,57 @@ class _Page1State extends State<Page1> {
                       fontSize: 25,
                       color: Color.fromARGB(255, 0, 0, 0))),
               centerTitle: true,
-                  actions: [   
-          IconButton(
-            icon: const Icon(Icons.shopping_basket_rounded),
-            onPressed: () {
-                Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const AllCartPage()),
-                          );
-             
-            },
-          ),
-    ],
+              actions: [
+                IconButton(
+                  icon: const Icon(Icons.shopping_basket_rounded),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AllCartPage()),
+                    );
+                  },
+                ),
+              ],
             ),
 
             //drawer here
             drawer: Drawer(
                 backgroundColor: const Color.fromARGB(255, 230, 238, 230),
                 child: Column(children: [
-                    
                   const DrawerHeader(
                       child: Icon(
                     Icons.card_travel,
                     size: 45,
                     color: Colors.black,
-
                   )),
 
                   // List tyle
                   ListTile(
-                       onTap:  () {  
-                            Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const AllCartPage()),
-                          );
-                       },
-                      leading: const Icon(Icons.home_filled), title: const Text('My Order')  ),
-
-
-                          ListTile(
-                       onTap:  () {  
-                           
-                       },
-                      leading: const Icon(Icons.home_filled), title: const Text('Categories')  ),
-
-
-
-                      ListTile(
-                       onTap:  () {  
-                           
-                       },
-                      leading: const Icon(Icons.home_filled), title: const Text('WishList')  ),
-
-               
-
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AllCartPage()),
+                        );
+                      },
+                      leading: const Icon(Icons.home_filled),
+                      title: const Text('My Order')),
 
                   ListTile(
-                       onTap:  () {  
-                           
-                       },
-                      leading: const Icon(Icons.arrow_right), title: const Text('Fruits')  ),
+                      onTap: () {},
+                      leading: const Icon(Icons.home_filled),
+                      title: const Text('Categories')),
+
+                  ListTile(
+                      onTap: () {},
+                      leading: const Icon(Icons.home_filled),
+                      title: const Text('WishList')),
+
+                  ListTile(
+                      onTap: () {},
+                      leading: const Icon(Icons.arrow_right),
+                      title: const Text('Fruits')),
 
                   const ListTile(
                       leading: Icon(Icons.arrow_right),
@@ -144,17 +132,11 @@ class _Page1State extends State<Page1> {
                       leading: Icon(Icons.arrow_right),
                       title: Text('Vegitables')),
 
-
-                       ListTile(
-                       onTap:  () {  
-                           
-                       },
-                      leading: const Icon(Icons.home_filled), title: const Text('About us')  ),
-
+                  ListTile(
+                      onTap: () {},
+                      leading: const Icon(Icons.home_filled),
+                      title: const Text('About us')),
                 ])),
-
-
-                
 
             //body
 
@@ -278,7 +260,7 @@ class _Page1State extends State<Page1> {
               Expanded(
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                      itemCount: value.DryCartItemList.length,
+                    itemCount: value.DryCartItemList.length,
                     itemBuilder: (context, index) {
                       // Fruits f1 = Fruits(
                       //     image: 'assets/images/dryfruits/almonds.jpeg',
@@ -296,7 +278,7 @@ class _Page1State extends State<Page1> {
                     }),
               ),
 
-               const Gnav()
+              const Gnav()
             ])));
   }
 }
